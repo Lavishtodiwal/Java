@@ -1,0 +1,8 @@
+Practice Questions
+
+
+1. int max(int x[])
+2. int min(int x[])
+3. int min1(int x[][])
+4. int max1(int x[][])
+5. int sort(int x[])
