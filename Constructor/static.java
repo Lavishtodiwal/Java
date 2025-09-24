@@ -10,7 +10,7 @@ class Static{
 }
 //static block only executed once in the life cycle of class 
 
-//means when compile this .java file we get three classes
+//means when compile this .java file we get three classes(befaltu ki line)
 class Static1{
 	public static void main(String... s){
 		System.out.print(Static.x);
