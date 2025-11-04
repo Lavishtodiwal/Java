@@ -1,10 +1,16 @@
 class temp{
 	public static void main(String... z){
-		String s = "hello";
-		char e[] = s.toCharArray();
+		String d = "its day";
+		char e[] = d.toCharArray();
 		
-		for(int i =0;i<e.length;i++){
-			System.out.println(e[i]);
+		byte [] arr = d.getBytes();
+		String s="";
+		
+		for(int i=0;i<e.length;i++){
+			if(arr[i]<='a' && arr[i]<='z'){
+				s = s+(char)(((int)arr[i])-32);
+			}
 		}
+		System.out.println(s);
 	}
 }

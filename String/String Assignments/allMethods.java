@@ -135,6 +135,47 @@ class AllMethods{
 		}
 		return d;
 	}
+	//method 10 -> vowel count
+	static int vowelCount(String s){
+		int count=0;
+		char arr[] = s.toCharArray();
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]=='a'||arr[i]=='e'||arr[i]=='i'||arr[i]=='o'||arr[i]=='u')
+				count++;
+		}
+		return count;
+	}
+	
+	//method 11-> length count
+	static int lengthCount(String s){
+		int count=0;
+		char arr[] = s.toCharArray();
+		for(int i=0;i<arr.length;i++){
+			count++;
+		}
+		return count;
+	}
+	
+	//method 14 -> changeCase (change case to another)
+	static String changeCase(String s){
+		//char arr[] = s.toCharArray();
+		byte [] arr = s.getBytes();
+		String d="";
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]<=65 && arr[i]>=91){
+				d =d+(char)(arr[i] +32);
+			}
+			if(arr[i]<=97 && arr[i]>=123){
+				d =d+(char)(arr[i]-32);
+			}
+			//if(arr[i]==' '){
+				
+			//}
+		}
+		return d;		
+	}
+	
+	
 	public static void main(String... z){
 		String s = "India is my country";
 		
@@ -149,6 +190,10 @@ class AllMethods{
 		System.out.println("all trim of '     hello ji     ' -> "+ allTrim("     hello ji     ")+".");
 		
 		System.out.println("Squeeze of 'its rainy day' -> "+ Squeez("its rainy day")+".");
+		System.out.println("Vowels in 'its rainy day' -> "+ vowelCount("its rainy day")+".");
+		System.out.println("Length of 'its rainy day' -> "+ lengthCount("its rainy day")+".")
+		;
+		System.out.println("change Case of 'India' to -> "+ changeCase("India")+".");
 		
 	}
 }
