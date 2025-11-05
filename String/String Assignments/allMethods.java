@@ -156,26 +156,67 @@ class AllMethods{
 		return count;
 	}
 	
+	//method -13 -> frequency count
+	static void frequencyCount(String s){
+		String d ="";
+		
+		for(int i=0;i<s.length();i++){
+			char ch = s.charAt(i);
+			
+			//skip if already there
+			if(d.indexOf(ch) != -1)
+				continue;
+			int count =0;
+			for(int j = 0;j < s.length();j++){
+				if(ch == s.charAt(j)){
+					count++;
+				}
+			}
+			System.out.println(ch + " -> "+count);
+			d +=ch;
+		}
+	}
 	//method 14 -> changeCase (change case to another)
 	static String changeCase(String s){
-		//char arr[] = s.toCharArray();
-		byte [] arr = s.getBytes();
 		String d="";
-		for(int i=0;i<arr.length;i++){
-			if(arr[i]<=65 && arr[i]>=91){
-				d =d+(char)(arr[i] +32);
+		
+		for(int i=0;i<s.length();i++){
+			char ch = s.charAt(i);
+			
+			if(ch>='a' && ch<='z'){
+				ch = (char)(ch-32);
 			}
-			if(arr[i]<=97 && arr[i]>=123){
-				d =d+(char)(arr[i]-32);
+			else if(ch>='A' && ch<='Z'){
+				ch = (char)(ch +32);
 			}
-			//if(arr[i]==' '){
-				
-			//}
+			d +=ch;
 		}
 		return d;		
 	}
 	
+	//method 15 -> single occurence
+	static String singleOccurence(String s){
+		String d="";
+		String t="";
+		
+		for(int i =0;i<s.length();i++){
+			char ch = s.charAt(i);
+			
+			if(d.indexOf(ch) != -1)
+				continue;
+			int count=0;
+			for(int j=0;j<s.length();j++){
+				if(ch == s.charAt(i)){
+					count++;
+				}
+			}
+			d +=ch;
+			t +=ch;
+		}
+		return t;
+	}
 	
+	//method 16 -> sorted order
 	public static void main(String... z){
 		String s = "India is my country";
 		
@@ -191,9 +232,14 @@ class AllMethods{
 		
 		System.out.println("Squeeze of 'its rainy day' -> "+ Squeez("its rainy day")+".");
 		System.out.println("Vowels in 'its rainy day' -> "+ vowelCount("its rainy day")+".");
-		System.out.println("Length of 'its rainy day' -> "+ lengthCount("its rainy day")+".")
-		;
+		System.out.println("Length of 'its rainy day' -> "+ lengthCount("its rainy day")+".");
+		
+		frequencyCount("its rainy day");
 		System.out.println("change Case of 'India' to -> "+ changeCase("India")+".");
+		
+		System.out.println("single occurence of 'Inddiaa' is -> "+ singleOccurence("Inddiaa")+".");
+		
+		//System.out.println("single occurence of 'Inddiaa' is -> "+ sortedOrder("Inddiaa")+".");
 		
 	}
 }

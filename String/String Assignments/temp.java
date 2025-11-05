@@ -1,16 +1,27 @@
 class temp{
 	public static void main(String... z){
-		String d = "its day";
-		char e[] = d.toCharArray();
+		String s = "candana";
+		String d="";
+		String t ="";
+		//frequency count
 		
-		byte [] arr = d.getBytes();
-		String s="";
-		
-		for(int i=0;i<e.length;i++){
-			if(arr[i]<='a' && arr[i]<='z'){
-				s = s+(char)(((int)arr[i])-32);
+		for(int i=0;i<s.length();i++){
+			char ch = s.charAt(i);
+			
+			//skip if already counted
+			if(d.indexOf(ch) != -1)
+				continue;
+			
+			int count = 0;
+			for(int j = 0;j<s.length();j++){
+				if(ch == s.charAt(j)){
+					count++;			
+				}
 			}
+			System.out.println(ch+"-> "+ count);
+			d +=ch;
+			t +=ch;
 		}
-		System.out.println(s);
+		System.out.println(t);
 	}
 }
