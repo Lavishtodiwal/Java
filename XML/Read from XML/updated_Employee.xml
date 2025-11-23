@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Employees>
+        
+    <Employee id="M101">
+                
+        <name>neha patil</name>
+                
+        <age>29</age>
+                
+        <role>Java Developer</role>
+                
+    
+        <salary>100000</salary>
+    </Employee>
+        
+    <Employee id="F102">
+                
+        <name>married neha</name>
+                
+        <age>24</age>
+                
+        <role>CSS Developer</role>
+                
+    
+        <salary>100000</salary>
+    </Employee>
+    
+</Employees>

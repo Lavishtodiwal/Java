@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<stuData1>
+    <Table>stuData1</Table>
+    <row1>
+        <ID>101</ID>
+        <Name>ashish</Name>
+        <Age>28</Age>
+    </row1>
+    <row2>
+        <ID>102</ID>
+        <Name>vipul</Name>
+        <Age>27</Age>
+    </row2>
+</stuData1>

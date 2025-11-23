@@ -1,0 +1,18 @@
+<?xml version = "1.0" ?>
+<!DOCTYPE addressbook SYSTEM "Address.dtd">
+<addressbook>
+	<contact>
+		<name> Shipra Goyal</name>
+		<address> V.N. Road Ludhiyana Punjab </address>
+		<city>Ludhiyana </city>
+		<state>Punjab</state>
+		<zip>400190</zip>
+		<phone>
+			<voice>077 3738 786 </voice>
+			<fax>033 9897 675</fax>
+		</phone>
+		<email>contact.shipragoyalstudio@gmail.com</email>
+		<web>www.shipragoyalpunjab.com</web>
+		<company>Geet Music Punjab </company>
+	</contact>
+</addressbook>

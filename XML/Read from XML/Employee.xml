@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Employees>
+    <Employee id="101">
+        <name>bihari</name>
+        <age>29</age>
+        <role>Java Developer</role>
+        <gender>Male</gender>
+    </Employee>
+
+    <Employee id="102">
+        <name>neha</name>
+        <age>24</age>
+        <role>CSS Developer</role>
+        <gender>Female</gender>
+    </Employee>
+</Employees>

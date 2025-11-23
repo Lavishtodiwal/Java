@@ -217,6 +217,62 @@ class AllMethods{
 	}
 	
 	//method 16 -> sorted order
+	static String sortedOrder(String s){
+		String d ="";
+		byte arr[] =s.getBytes();
+		for(int i=0;i<arr.length-1;i++){
+			for(int j=0;j<arr.length-i-1;j++){
+				if(arr[j]>arr[j+1]){
+					byte temp = arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1] = temp;
+				}
+			}
+		}
+		for(byte ar :arr)
+			d +=(char)ar;
+		return d;
+	}
+	
+	//method 17-> sorted words
+	static String sortedWords(String s){
+		String d ="";
+		String words[] = s.split(" ");
+		
+		for(String word: words){
+			byte arr[] = word.getBytes();
+			//bubble sorted
+			for(int i=0;i<arr.length-1;i++){
+				for(int j=0;j<arr.length-i-1;j++){
+					if(arr[j]>arr[j+1]){
+						byte temp = arr[j];
+						arr[j] = arr[j+1];
+						arr[j+1] = temp;
+					}
+				}
+			}
+			for(byte ar:arr)
+				d+=(char)ar;
+			d+=" ";
+			
+		}
+		return d;
+	}
+	
+	//method 18 -> find string 1 in string 2
+	static boolean find(String s1, String s2){
+		String words[] = s1.split(" ");
+		String res = "";
+		for(String word: words){
+			if(word.equalsIgnoreCase(s2)){
+				res+="found";
+			}
+		}
+		if(res.equals("found"))
+			return true;
+		else
+			return false;
+	}
 	public static void main(String... z){
 		String s = "India is my country";
 		
@@ -239,7 +295,11 @@ class AllMethods{
 		
 		System.out.println("single occurence of 'Inddiaa' is -> "+ singleOccurence("Inddiaa")+".");
 		
-		//System.out.println("single occurence of 'Inddiaa' is -> "+ sortedOrder("Inddiaa")+".");
+		System.out.println("sorted order of 'CAR' is -> "+ sortedOrder("tool")+".");
+		
+		System.out.println("sorted order of words of 'Car is a invention to travel' is -> "+ sortedWords("car is a invention to travel")+".");
+		
+		System.out.println("is 'invention' inside this string 'Car is a invention to travel' is -> "+ find("car is a invention to travel","to")+".");
 		
 	}
 }

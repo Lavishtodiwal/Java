@@ -1,0 +1,20 @@
+<?xml version ="1.0" ?>
+	<?xml-stylesheet type = "text/css" href="Address.css"?>
+<!DOCTYPE addressbook SYSTEM "address.dtd">
+
+<addressbook>
+	<contact>
+			<name>Karan Auijla </name>
+			<address>GS park Chandigarh Punjab</address>
+			<city>Chandigarh</city>
+			<state>Punjab</state>
+			<zip>400899</zip>
+			<phone>
+				<voice>088 7654 786 </voice>
+			</phone>
+			<email>contact.karanauijla@gmail.com</email>
+			<web>www.karanauijla.com</web>
+			<company>Karan Auijla </company>
+		
+	</contact>
+</addressbook>
