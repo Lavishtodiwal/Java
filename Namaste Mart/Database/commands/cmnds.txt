@@ -1,0 +1,45 @@
+-- Create database
+CREATE DATABASE IF NOT EXISTS smart;
+USE smart;
+
+-- Create user
+CREATE USER IF NOT EXISTS 'smart'@'localhost' IDENTIFIED BY 'smart';
+GRANT ALL PRIVILEGES ON smart.* TO 'smart'@'localhost';
+FLUSH PRIVILEGES;
+
+-- =========================
+-- Product table
+-- =========================
+DROP TABLE IF EXISTS product;
+
+CREATE TABLE product (
+    pid VARCHAR(45) NOT NULL,
+    pname VARCHAR(100),
+    ptype VARCHAR(200),
+    pinfo VARCHAR(350),
+    pprice DECIMAL(12,2),
+    pquantity INT,
+    image LONGBLOB,
+    PRIMARY KEY (pid)
+);
+
+-- =========================
+-- Orders table
+-- =========================
+DROP TABLE IF EXISTS orders;
+
+CREATE TABLE orders (
+    orderid VARCHAR(45) NOT NULL,
+    prodid VARCHAR(45) NOT NULL,
+    quantity INT,
+    amount DECIMAL(10,2),
+    shipped INT DEFAULT 0,
+    order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (orderid, prodid),
+    INDEX productid_idx (prodid),
+    CONSTRAINT productid
+        FOREIGN KEY (prodid)
+        REFERENCES product(pid)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
