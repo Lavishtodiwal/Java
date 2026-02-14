@@ -1,0 +1,13 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>MailServlet</servlet-name>
+        <servlet-class>DemoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MailServlet</servlet-name>
+        <url-pattern>/sendMail</url-pattern>
+    </servlet-mapping>
+
+</web-app>

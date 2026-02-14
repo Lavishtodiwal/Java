@@ -1,0 +1,1 @@
+cd "D:\Java\DateProject" && javac *.java && java Start
