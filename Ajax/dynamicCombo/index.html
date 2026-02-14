@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+S<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function loadXMLDoc() {
+            var xmlhttp;
+            var keys = document.myform.sele.value
+            var urls = "db.jsp?ok=" + keys
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                removall();
+                if (xmlhttp.readyState == 4) {
+                    z = 0;
+                    var roott = xmlhttp.responseXML.documentElement;
+                    var ress = roott.getElementsByTagName("stdname")[z].childNode[0].nodeValue;
+                    while (ress != null) {
+                        addoptions(ress)
+                        z++
+                        var ress = roott.getElementsByTagName("stdname")[z].childNode[0].nodeValue;
+                    }
+                }
+            }
+            function removall() {
+                var ct = document.myform.sele2.length;
+                for (i = ct; i >= 0; i--) {
+                    document.myform.sele2.options[i] = null;
+                }
+            }
+            var addoptions(reslt){
+                var ct1 = document.createElement("OPTION");
+                ct1.text = reslt;
+                ct1.value = reslt;
+                document.myform.sele2.options.add(ct1);
+            }
+        }
+        xmlhttp.open("GET", urls, true);
+        xmlhttp.send();
+    </script>
+</head>
+
+<body>
+    <form name="myform">
+        <select name="sele" onchange="loadXMLDoc">
+            <option>option</option>
+            <option value="75">75</option>
+            <option value="65">65</option>
+            <option value="40">40</option>
+        </select>
+        Employee Name : <select name="sele2"><option>--choose--</option></select>
+    </form>
+</body>
+
+</html>
