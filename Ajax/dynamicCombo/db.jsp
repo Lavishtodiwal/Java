@@ -1,13 +1,13 @@
-<%@ page import "java.io.*,java.sql.*" %>
-<%@ page contentType ="test/html" pageEncoding ="UTF-8" %>
+<%@ page import="java.io.*,java.sql.*" %>
+<%@ page contentType ="text/html" pageEncoding ="UTF-8" %>
 
 <% 
-response.setContentType("test/xml");
+response.setContentType("text/xml");
 String xn= request.getParameter("ok");
-int i = Integer.parseInt(sn);
+int i = Integer.parseInt(xn);
 
 Class.forName("oracle.jdbc.driver.OracleDriver");
-Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhos:1521:XE","virus", "virus");
+Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","virus", "virus");
 Statement st = con.createStatement();
 ResultSet rs = st.executeQuery("select name from student where age ="+i);
 out.println("<student>");

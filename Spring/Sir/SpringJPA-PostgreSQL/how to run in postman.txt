@@ -1,0 +1,8 @@
+1.GO TO BODY MENU
+2.SELECT RAW RADIO button
+3.select json
+
+
+{"studentId":1001,"studentName":"codesquadz","studentAddress":"noida"}
+{"id":1002,"firstName":"codesquadz","lastName":"noida","age":40}
+http://localhost:8081/student

@@ -1,0 +1,11 @@
+M2_HOME=C:\Program Files (x86)\apache-maven-3.5.0
+MAVEN_HOME=C:\Program Files (x86)\apache-maven-3.5.0
+
+
+path=%JAVA_HOME%\bin;%M2_HOME%\bin;C:\Program Files\Java\jdk1.8.0\bin;E:\spring2017\Spring\NewSpring\New folder\SPRING-MAVEN-SPRING-BOOT-AOP\spring-1.5.8.RELEASE\bin;
+
+
+go to SPringBoot folder where you can find pom.xml and run the following command:
+mvn clean install
+mvn spring-boot:run
+https://start.spring.io/

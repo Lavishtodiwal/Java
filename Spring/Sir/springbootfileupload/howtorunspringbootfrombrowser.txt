@@ -1,0 +1,4 @@
+http://localhost:9090/insert
+go to SPringBoot folder where you can find pom.xml and run the following command:
+mvn clean install
+mvn spring-boot:run

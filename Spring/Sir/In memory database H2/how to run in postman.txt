@@ -1,0 +1,7 @@
+1.GO TO BODY MENU
+2.SELECT RAW RADIO button
+3.select json
+
+
+{"studentId":1001,"studentName":"codesquadz","studentAddress":"noida"}
+

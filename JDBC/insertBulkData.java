@@ -5,14 +5,14 @@ class insertBulkData{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
 			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","virus","virus");
-			String sql = "insert into student values(?, ?,?,?)";
+			String sql = "insert into tbluser values(?, ?,?,?)";
 			PreparedStatement pst =con.prepareStatement(sql);
 			int count=0;
 			for(int i=1;i<=10;i++){
 				pst.setInt(1,i);
 				pst.setString(2, "krishna"+i);
-				pst.setString(3, "Delhi"+i);
-				pst.setInt(4,10+i);
+				pst.setString(3, "kumar"+i);
+				pst.setString(4,"krishnakumar@"+i);
 				pst.executeUpdate();
 				count++;
 			}

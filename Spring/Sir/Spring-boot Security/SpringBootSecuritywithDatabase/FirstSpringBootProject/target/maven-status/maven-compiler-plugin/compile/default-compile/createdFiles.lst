@@ -1,0 +1,9 @@
+com\example\FirstSpringBootProject\config\CommonConfig.class
+com\example\FirstSpringBootProject\repository\StudentRepository.class
+com\example\FirstSpringBootProject\config\SecurityConfig.class
+com\example\FirstSpringBootProject\FirstSpringBootProjectApplication.class
+com\example\FirstSpringBootProject\POJO\Department.class
+com\example\FirstSpringBootProject\controller\StudentController.class
+com\example\FirstSpringBootProject\POJO\Student.class
+com\example\FirstSpringBootProject\service\StudentService.class
+com\example\FirstSpringBootProject\entity\StudentEntity.class
