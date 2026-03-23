@@ -1,0 +1,6 @@
+1.start eureka server
+2.start producer
+3.start zull server
+4.start consumer
+
+https://start.spring.io/

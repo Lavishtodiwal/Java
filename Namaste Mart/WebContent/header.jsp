@@ -88,7 +88,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="userHome.jsp"><span class="glyphicon glyphicon-home">&nbsp;</span>NamasteMart</a>
-            </div>
+            </div>  
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="userHome.jsp"<span class="glyphicon glyphicon-home">Products</span></a></li>
@@ -115,7 +115,7 @@
                     <li>
                         <a href="cartDetails.jsp" style="margin: 0px; padding: 0px;" id="mycart">
                             <i data-count="<%= notf %>"
-                               class="fa fa-shopping-cart fa-3x icon-white badge"
+                               class="fa     fa-3x icon-white badge"
                                style="background-color: #333; margin: 0px; padding: 0px; padding-bottom: 0px; padding-top: 5px;"
                             ></i>
                         </a>
